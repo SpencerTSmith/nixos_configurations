@@ -372,6 +372,12 @@
     };
   };
 
+  programs.git = {
+    enable = true;
+    userEmail = "spencertsmith2003@gmail.com";
+    userName  = "SpencerTSmith";
+  };
+
   programs.bat = {
     enable = true;
     config = {
@@ -656,6 +662,7 @@
     enable = true;
     settings = {
       logo = {
+        source = "nixos_old_small";
         padding = {
           top = 0;
         };

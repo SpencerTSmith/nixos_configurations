@@ -1,14 +1,7 @@
-{ config, lib, pkgs, ... }:
-
-let
-home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
-in
-{
-  imports =
-    [
-    ./hardware-configuration.nix
-      (import "${home-manager}/nixos")
-    ];
+{ config, lib, pkgs, ... }: {
+  imports = [
+      ./hardware-configuration.nix
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -79,13 +72,11 @@ in
 
   services.keyd = {
     enable = true;
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-        settings = {
-          main = {
-            capslock = "overload(control, esc)";
-          };
+    keyboards.default = {
+      ids = [ "*" ];
+      settings = {
+        main = {
+          capslock = "overload(control, esc)";
         };
       };
     };
@@ -116,13 +107,6 @@ in
     isNormalUser = true;
     extraGroups = [ "wheel" ];
       shell = pkgs.zsh;
-  };
-
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    backupFileExtension = "backup";
-    users.wayfarer = import /home/wayfarer/.config/home-manager/home.nix;
   };
 
 # Some programs need SUID wrappers, can be configured further or are

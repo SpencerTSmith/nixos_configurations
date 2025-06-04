@@ -17,14 +17,14 @@
         JOYOUS-MACHINE-EXCELLENCE = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./nixos/configuration.nix
+            ./host/JOYOUS-MACHINE-EXCELLENCE/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 backupFileExtension = "backup";
-                users.wayfarer = import ./home-manager/home.nix;
+                users.wayfarer = import ./home/wayfarer/home.nix;
               };
             }
           ];

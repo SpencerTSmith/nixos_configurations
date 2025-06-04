@@ -14,6 +14,7 @@
     pavucontrol
     hyprpicker
     transmission_4-gtk
+    spotify
 
     (lib.hiPrio clang)
     gcc

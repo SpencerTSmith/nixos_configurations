@@ -9,12 +9,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
-    let
-      lib = nixpkgs.lib;
-    in {
+  outputs = { self, nixpkgs, home-manager, ... }: {
       nixosConfigurations = {
-        JOYOUS-MACHINE-EXCELLENCE = lib.nixosSystem {
+        JOYOUS-MACHINE-EXCELLENCE = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./host/JOYOUS-MACHINE-EXCELLENCE/configuration.nix

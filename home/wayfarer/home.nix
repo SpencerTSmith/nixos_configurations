@@ -15,8 +15,8 @@
     hyprpicker
     transmission_4-gtk
 
+    (lib.hiPrio clang)
     gcc
-    clang
   ];
 
   home.sessionVariables = {

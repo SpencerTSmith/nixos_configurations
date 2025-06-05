@@ -295,13 +295,13 @@
           keyColor = "32";
         }
         {
-          type = "terminal";
-          key = " ├  ";
+          type = "terminalfont";
+          key = " ├  ";
           keyColor = "32";
         }
         {
-          type = "terminalfont";
-          key = " └  ";
+          type = "terminal";
+          key = " └  ";
           keyColor = "32";
         }
         "break"

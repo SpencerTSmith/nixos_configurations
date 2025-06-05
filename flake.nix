@@ -21,7 +21,7 @@
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 backupFileExtension = "backup";
-                users.wayfarer = import ./home/wayfarer/home.nix;
+                users.wayfarer = import ./home/wayfarer.nix;
               };
             }
           ];

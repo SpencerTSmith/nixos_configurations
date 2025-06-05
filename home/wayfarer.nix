@@ -4,12 +4,12 @@
   home.homeDirectory = "/home/wayfarer";
 
   imports = [
-    ../modules/hyprland.nix
-    ../modules/terminal.nix
+    ./modules/hyprland.nix
+    ./modules/terminal.nix
+    ./modules/neovim.nix
   ];
 
   home.packages = with pkgs; [
-    neovim
     wl-clipboard
     nerd-fonts.blex-mono
     gruvbox-plus-icons
@@ -24,6 +24,9 @@
 
     (lib.hiPrio clang)
     gcc
+    odin
+    glfw
+    libGL
   ];
 
   home.sessionVariables = {

@@ -41,6 +41,9 @@
   hardware.graphics.enable = true;
   hardware.bluetooth.enable = true;
 
+  hardware.keyboard.qmk.enable = true;
+  services.udev.packages = [ pkgs.via ];
+
   hardware.nvidia = {
     modesetting.enable = true;
     open = true;

@@ -20,6 +20,12 @@
     transmission_4-gtk
     spotify
 
+    qmk
+    qmk-udev-rules
+    qmk_hid
+    via
+    vial
+
     gruvbox-plus-icons
 
     nerd-fonts.blex-mono

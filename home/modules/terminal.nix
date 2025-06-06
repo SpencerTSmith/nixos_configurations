@@ -264,7 +264,6 @@
         }
         {
           type = "packages";
-          format = "{} (nix)";
           key = " ├ 󰏖 ";
           keyColor = "31";
         }
@@ -280,7 +279,7 @@
           keyColor = "32";
         }
         {
-          type = "wmtheme";
+          type = "theme";
           key = " ├ 󰉼 ";
           keyColor = "32";
         }
@@ -295,7 +294,7 @@
           keyColor = "32";
         }
         {
-          type = "terminalfont";
+          type = "font";
           key = " ├  ";
           keyColor = "32";
         }

@@ -1160,7 +1160,7 @@
         horizontal-pad = 10;
         launch-prefix = "uwsm app -- ";
         dpi-aware = "no";
-        image-size-ratio = .5;
+        image-size-ratio = 0.5;
       };
       dmenu = {
         exit-immediately-if-empty = "yes";

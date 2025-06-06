@@ -11,8 +11,6 @@
 
   home.packages = with pkgs; [
     wl-clipboard
-    nerd-fonts.blex-mono
-    gruvbox-plus-icons
     nemo
     mate.engrampa
     celluloid
@@ -21,6 +19,15 @@
     hyprpicker
     transmission_4-gtk
     spotify
+
+    gruvbox-plus-icons
+
+    nerd-fonts.blex-mono
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+    noto-fonts-emoji
+    noto-fonts-extra
 
     (lib.hiPrio clang)
     gcc
@@ -85,6 +92,7 @@
         "x-scheme-handler/magnet" = "transmission-gtk.desktop";
       };
     };
+    dataFile."icons/Gruvbox-Plus-Dark".source = "${pkgs.gruvbox-plus-icons}/share/icons/Gruvbox-Plus-Dark";
   };
 
   services.network-manager-applet.enable = true;

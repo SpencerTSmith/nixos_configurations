@@ -48,7 +48,6 @@
     completionInit = ''
       autoload -Uz compinit
       zstyle ':completion:*' menu select
-      zstyle ':completion:*' special-dirs true
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
       zstyle ':completion:*' list-colors "$\{(s.:.)LS_COLORS}"
       zstyle ':completion:*' completer _complete _match _approximate

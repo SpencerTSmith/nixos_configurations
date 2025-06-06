@@ -1,5 +1,4 @@
-# Contains a pretty minimal (but featureful) neovim configuration
-#   - lsp, completions, qol
+# Just the lsps since mason is not the correct solution on nixos, don't really want to bother porting all my nvim configs over!
 { config, lib, pkgs, ... }: {
   programs.neovim = {
     enable = true;

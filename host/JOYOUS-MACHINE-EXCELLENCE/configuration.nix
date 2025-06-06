@@ -7,8 +7,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
-  boot.initrd.luks.devices."cryptextra".device = "/dev/disk/by-uuid/0477b0ee-296c-495d-b99b-8e6cb86d6eeb";
-
   boot.loader.timeout = 0;
   boot.loader.systemd-boot = {
     enable = true;
@@ -69,18 +67,6 @@
     alsa.enable       = true;
     alsa.support32Bit = true;
     jack.enable       = true;
-  };
-
-  services.keyd = {
-    enable = true;
-    keyboards.default = {
-      ids = [ "*" ];
-      settings = {
-        main = {
-          capslock = "overload(control, esc)";
-        };
-      };
-    };
   };
 
   i18n.defaultLocale = "en_US.UTF-8";

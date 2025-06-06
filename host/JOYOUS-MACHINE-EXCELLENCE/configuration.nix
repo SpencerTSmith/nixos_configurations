@@ -31,8 +31,6 @@
     git
     p7zip
     parted
-    qmk
-    via
   ];
 
   networking.hostName = "JOYOUS-MACHINE-EXCELLENCE";
@@ -42,16 +40,6 @@
 
   hardware.graphics.enable = true;
   hardware.bluetooth.enable = true;
-
-  hardware.keyboard.qmk.enable = true;
-  services.udev.packages = [
-    pkgs.via
-    pkgs.qmk
-    pkgs.qmk-udev-rules
-    pkgs.qmk_hid
-    pkgs.via
-    pkgs.vial
-  ];
 
   hardware.nvidia = {
     modesetting.enable = true;
